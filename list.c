@@ -230,5 +230,16 @@ int I_appendItemLL(LLNode* root, int value)
 
 int I_getItemLL(LLNode root, int index)
 {
-    
+    if (idx == 0) 
+        return root;
+    unsigned int idx = 1; // Account for root
+    LLNode* node = root.next;
+    while (node != NULL)
+    {
+        if (idx == index)
+            return node->data;
+        node = node->next;
+        idx++;
+    }
+    registerError("Index out of bounds");
 }
