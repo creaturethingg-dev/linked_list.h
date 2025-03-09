@@ -20,6 +20,6 @@ int* I_linkedListToArray(LLNode root);
 double* D_linkedListToArray(LLNode root);
 float* F_linkedListToArray(LLNode root);
 
-int I_appendItemLL(LLNode root, int value);
+int I_appendItemLL(LLNode* root, int value);
 
 int I_getItemLL(LLNode root, int index);

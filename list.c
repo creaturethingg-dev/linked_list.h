@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "list.h"
 
 void registerError(char* error)
@@ -205,6 +206,28 @@ float* F_linkedListToArray(LLNode root)
     return array;
 }
 
+char* S_appendItemLL(LLNode* root, const char* value)
+{
+    if (root == NULL)
+        registerError("Cannot append item to null root");
+    LLNode *node = root;
+    while (node->next != NULL)
+    {
+        node = node->next;
+    }
+
+    LLNode* newNode = (LLNode *) malloc(sizeof(LLNode));
+    if (newNode == NULL)
+        registerError("Unable to allocate memory for new linked list node");
+    node->next = newNode;
+    newNode->prev = node;
+    char* val = strdup(value);
+    if (val == NULL)
+        registerError("Unable to allocate memory for string for new linked list node");
+    newNode->data = val;
+    return value;
+}
+
 int I_appendItemLL(LLNode* root, int value)
 {
     if (root == NULL)
@@ -223,6 +246,29 @@ int I_appendItemLL(LLNode* root, int value)
     int* val = (int *) malloc(sizeof(int));
     if (val == NULL)
         registerError("Unable to allocate memory for integer for new linked list node");
+    *val = value;
+    newNode->data = val;
+    return value;
+}
+
+double D_appendItemLL(LLNode* root, double value)
+{
+    if (root == NULL)
+        registerError("Cannot append item to null root");
+    LLNode *node = root;
+    while (node->next != NULL)
+    {
+        node = node->next;
+    }
+
+    LLNode* newNode = (LLNode *) malloc(sizeof(LLNode));
+    if (newNode == NULL)
+        registerError("Unable to allocate memory for new linked list node");
+    node->next = newNode;
+    newNode->prev = node;
+    double* val = (double *) malloc(sizeof(double));
+    if (val == NULL)
+        registerError("Unable to allocate memory for double for new linked list node");
     *val = value;
     newNode->data = val;
     return value;
