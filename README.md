@@ -2,6 +2,12 @@
 
 ``` linked_list.h ``` is a utility C library that adds linked lists and several related utility functions.
 
+## Repo
+
+- ```examples\``` contains multiple code examples, showcasing the functions' usages.
+- ```include\``` contains the ```linked_list.h``` header file.
+- ```bin\``` contains ```liblinked_list.a```, ```linked_list32.lib```, and ```linked_list64.lib```
+  
 ## Naming Conventions
 
 Many functions are prefixed with S_, I_, D_, F_, and P_ .
