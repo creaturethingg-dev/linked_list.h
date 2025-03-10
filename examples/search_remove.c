@@ -5,7 +5,7 @@
 */
 
 #include <stdio.h>
-#include "../linked_list.c"
+#include "linked_list.h"
 
 int main(void)
 {
