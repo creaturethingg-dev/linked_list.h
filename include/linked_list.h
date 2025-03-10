@@ -18,7 +18,7 @@ typedef struct
 
 typedef LinkedListTuple LLTuple; /* Shorter way to refer to type */
 
-// Configures what function is call on the event of an error.
+// Configures what function is called in the event of an error.
 // By default, a message is printed to stderr, and the
 // program is aborted
 void configErrorActionLL(void (*func)(const char*));
