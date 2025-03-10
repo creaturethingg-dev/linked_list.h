@@ -4,7 +4,7 @@
 */
 
 #include <stdio.h>
-#include "../linked_list.c"
+#include "linked_list.h"
 
 struct myStruct
 {
