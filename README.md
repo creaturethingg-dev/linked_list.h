@@ -23,13 +23,20 @@ All functions have descriptions (in ```linked_list.h```), so refer to that if so
 
 ## How to use it
 
-If you are using Linux/macOS, download the ```liblinked_list.a```.
-If you are using Windows, download the ```linked_list.lib``` file.
-Download the ```linked_list.h``` header file in ```include\```.
+### Linux/macOS/Windows (MSYS2 or Cygwin)
+Download the ```liblinked_list.a``` file, and the ```linked_list.h``` file in ```include\```.
+I would suggest keeping the files in the same folder as your code for simplicity, but you can keep them 
+in a different folder, too.
+When compiling, link the .a file. I use gcc, so I'd use this command:
+```gcc file.c -o file.exe -Lpath/to/lib/folder -llinked_list```.
 
-You should be able to use the libraries now.
+If you keep the files in the same folder as your code, your can use ```-L.``` in the gcc command to specify that
+it is in the same folder.
 
-Make sure you link the libraries when compiling.
+### Windows (Visual Studio)
+Download the ```linked_list32.lib``` or ```linked_list64.lib``` file, depending on whether you're building
+for 32-bit or 64-bit. Place ```linked_list.h``` (found in include folder) inside your ```include\``` directory.
+Add the ```.lib``` file to your project's additional library directories (in VS settings).
 
 ## How does it work
 
