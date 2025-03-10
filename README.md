@@ -4,7 +4,7 @@
 
 ## Naming Conventions
 
-Many functions are prefixed with S_, I_, D_, _F, and P_.
+Many functions are prefixed with S_, I_, D_, F_, and P_ .
 These prefixes represent types
 - S_ = string
 - I_ = int
