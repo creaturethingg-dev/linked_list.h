@@ -11,3 +11,8 @@ These prefixes represent types
 - D_ = double
 - F_ = float
 - P_ = pointer (```void *```)
+
+They specify what type the function deals with.
+For example, ```S_setItemLL(LLNode* root, int index, const char* value)``` sets the value of a linked list at index
+to a string value specified. Similarly, ```S_getItemLL(LLNode* root, int index)``` retrieves a string value at
+index of a linked list. The other prefixes do the same thing for different types.
