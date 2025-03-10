@@ -21,3 +21,12 @@ linked list (see ```examples/struct_list.c```).
 
 All functions have descriptions (in ```linked_list.h```), so refer to that if something is unclear.
 
+## How to use it
+
+If you are using Linux/macOS, download the ```liblinked_list.a```.
+If you are using Windows, download the ```linked_list.lib``` file.
+Download the ```linked_list.h``` header file in ```include\```.
+
+You should be able to use the libraries now.
+
+Make sure you link the libraries when compiling.
