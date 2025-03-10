@@ -30,3 +30,10 @@ Download the ```linked_list.h``` header file in ```include\```.
 You should be able to use the libraries now.
 
 Make sure you link the libraries when compiling.
+
+## How does it work
+
+It uses a system of nodes, each containing a pointer to the last node and the next.
+They also hold a void pointer to their value. 
+This is part of the reason why many functions are prefixed, so that they automatically cast and dereference the value pointers.
+The P_ prefixed function just return the void pointer directly, though
